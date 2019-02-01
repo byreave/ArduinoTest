@@ -17,14 +17,6 @@ void loop()
 {
   mpu6050.update();
 
-  //if (!Serial.available())
-  //   return;
-
-  // String str = Serial.readString();
-  // if (str == "data")
-  // {
-    
-
 if (millis() - timer > 10)
 {
     float userInputZ = cos(mpu6050.getAngleX() / 180.0f * PI) * cos(mpu6050.getAngleY() / 180.0f * PI) - mpu6050.getAccZ();
